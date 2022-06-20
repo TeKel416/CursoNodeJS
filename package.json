@@ -1,5 +1,9 @@
 {
-  "dependencies": {
-    "joi": "^17.6.0"
-  }
+  "name": "NodeJS",
+  "version": "1.0.0",
+  "description": "Pacote das aulas sobre NodeJS da HCode na Udemy",
+  "main": "index.js",
+  "repository": "https://github.com/TeKel416/CursoNodeJS.git",
+  "author": "Maria Eduarda de S. Barros <maria123duarda@gmail.com>",
+  "license": "MIT"
 }
