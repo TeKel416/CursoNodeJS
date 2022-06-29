@@ -14,4 +14,10 @@ function make(dir){
     });
 };
 
-make(assets);
+//make(assets);
+
+fs.mkdir(`console`, {recursive: true} ,(err)=>{
+    if(err) throw err;
+
+    console.log(`Diretório criado com sucesso! :D`)
+});
