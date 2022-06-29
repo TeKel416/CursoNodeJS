@@ -1,5 +1,4 @@
 const { EventEmitter } = require('events');
-const { emit } = require('process');
 const emitter = new EventEmitter();
 
 const validaObjeto = (a)=>{
