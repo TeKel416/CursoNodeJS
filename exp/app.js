@@ -4,6 +4,9 @@ const admRoutes = require('./routes/admin');
 const userRoutes = require('./routes/usuario');
 const cookieParser = require('cookie-parser');
 
+app.use('/static', express.static('public'));
+
+
 //método padrão: GET (consulta)
 //POST: envio de informações
 
