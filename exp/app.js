@@ -3,8 +3,21 @@ const app = express();
 const admRoutes = require('./routes/admin');
 const userRoutes = require('./routes/usuario');
 const cookieParser = require('cookie-parser');
+const path = require('path')
 
-app.use('/static', express.static('public'));
+/*
+app.use('/', express.static(__dirname + '/public'));
+
+app.get('/', (req, res)=>{
+    //res.send('Halo Warudo');
+    res.render();
+});*/
+
+app.set("view engine", "pug");
+app.set("views", path.join(__dirname, "public"));
+app.get("/", (req, res)=>{
+    res.render('index')
+})
 
 
 //método padrão: GET (consulta)
@@ -37,11 +50,11 @@ app.get('/getcookie', (req, res)=>{
     }
 });
 
+
 //rota padrão
 // request e response = requisição e resposta
-app.get('/', (req, res)=>{
-    res.send('Halo Warudo');
-});
+
+
 
 //se alguém usar /admin, ele mandará para o arquivo admin.js
 app.use('/admin', admRoutes);
