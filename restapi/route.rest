@@ -1,0 +1,21 @@
+### acessando via GET
+GET http://localhost:3000/subscribers
+###
+POST http://localhost:3000/subscribers
+Content-Type: application/json
+
+{
+    "userName": "Maria Barros",
+    "userChannel": "Miraculous Ladybug Traduções"
+}
+###
+GET http://localhost:3000/subscribers/62cf19418427f994b4c10527
+###
+DELETE http://localhost:3000/subscribers/62cf05d9ccf93ac3293f3f40
+###
+PATCH http://localhost:3000/subscribers/62cf1acdc2c269c5e3483bb4
+Content-Type: application/json
+
+{
+    "userName": "Duda Souza"
+}
